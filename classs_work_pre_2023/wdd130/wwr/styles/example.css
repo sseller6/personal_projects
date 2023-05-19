@@ -1,0 +1,42 @@
+body {
+    background-color:purple;
+}
+h1 {
+    background-color:chartreuse;
+    padding:8px;
+    text-align:center;
+} 
+p {
+    color:white;
+}
+/* 
+we can use 36px, 3em, or 120% to change the font size.
+*/
+.fancy {
+    text-transform:uppercase;
+    font-weight:bold;
+    font-size:1.6em;
+    color:palegoldenrod;
+    border:1px solid white;
+    padding:50px 10px 100px;
+    margin: 40px;
+    margin-left: 120px;
+    background-color: red;
+}
+
+#david {
+    width:100px;
+}
+
+.superfancy{
+    font-family: 'Great Vibes', cursive;
+    font-size: 3em;
+}
+/* Change classes with a . change ids with a # */
+
+/* padding: Top, Right, Bottom, Left */
+
+/* Background color does not apply to margin. */
+
+/* Padding always goes inside the border. 
+It gives the words space away from the border. */

@@ -1,0 +1,52 @@
+/* 
+Colors:
+Background = #201c1c 
+Footer = #405c8c
+White part =
+*/
+
+#content{
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #201c1c;
+}
+#image{
+    max-width: 300px;
+    margin: 0 auto;
+    border-radius: 50px;
+}
+#title{
+    max-width: 300px;
+    margin: -26px auto;
+    background-color: white;
+    text-align: center;
+}
+footer{
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 10px 0 0 0;    
+    background-color: white;
+    border-radius: 5px;
+    text-align: center;
+}
+#bottom{
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: #405c8c;
+    padding: 25px 25px 35px 25px;
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+}
+ #read{
+    padding: 0 0 0 30px;
+}
+/*
+#views{
+    padding: 25px 25px 30px 30px;
+}
+#comments{
+    padding: 25px 25px 30px 30px;
+}
+} */

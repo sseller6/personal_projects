@@ -1,0 +1,323 @@
+/* if you are using any Google fonts change the font names below to your fonts. 
+Any spaces in your font name should be replaced with a +. 
+Fonts are separated by a | */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:wght@200&display=swap');
+
+:root {
+  /* change the values below to your colors from your palette */
+  --primary-color: #5A9367   ;
+  --secondary-color: #5CAB7D ;
+  --accent1-color: #44633F;
+  --accent2-color: #3F4B3B;
+
+  /* change the values below to your chosen font(s) */
+  --heading-font: "IM Fell French Canon SC";
+  --paragraph-font: 'Roboto Serif', sans-serif;
+
+  /* these colors below should be chosen from among your palette colors above */
+  --headline-color-on-white: #3F4B3B;  /* headlines on a white background */ 
+  --headline-color-on-color: white; /* headlines on a colored background */ 
+  --paragraph-color-on-white: #131712; /* paragraph text on a white background */ 
+  --paragraph-color-on-color: white; /* paragraph text on a colored background */ 
+  --paragraph-background-color: #3F4B3B  ;
+  --nav-link-color: white;
+  --nav-background-color: #1A2518;
+  --nav-hover-link-color: #4ADBC8;
+  --nav-hover-background-color: #14665B;
+}
+
+
+/*  Look around below...but DON'T CHANGE ANYTHING! */
+
+/*  
+I really like this template. It's easy to work with.
+display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: 20% 20% 20% 20% 20%;
+  
+*/
+
+body {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4em;
+  font-size: 18px;
+  text-align: center;
+}
+img {
+  display: block;
+  margin: 0 auto;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  color: var(--headline-color-on-white);
+}
+h2 {
+  text-align: center;
+}
+hr {
+  height: 3px;
+  margin: 35px 0;
+  background: var(--accent1-color);
+}
+header {
+  padding: 1em;
+  text-align: center;
+  color: var(--paragraph-color-on-color);
+  background-color: var(--paragraph-background-color);
+}
+header > h1, header > h2 {
+  color: var(--headline-color-on-color);
+}
+p {
+  font-family: var(--paragraph-font);
+  color: var(--paragraph-color);
+  padding: 1em;
+}
+.logo {
+  max-width: 100px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+}
+
+/* Home Page */
+main p:nth-of-type(1) {
+  grid-column: 1/3;
+  margin-top: 50px;
+}
+main p:nth-of-type(2) {
+  grid-column: 1/3;
+  grid-row: 2/3;
+
+}
+#blue_shirt_img {
+  grid-column:3/6;
+  grid-row:1/2;
+  max-width: 670px;
+  padding-top: 50px;
+}
+#home_page_introduction {
+  grid-column: 1/6;
+  grid-row: 4/6;
+}
+#extrovert_img {
+  grid-column: 0/3;
+  grid-row: 6/8;
+  padding: 25px 25px 25px 25px;
+}
+#introvert_img {
+  grid-column: 4/9;
+  grid-row: 6/8;
+  margin-left: -50px;
+  padding: 25px 25px 25px 25px;
+}
+
+/* Must Know Page */
+main p:nth-of-type(1) {
+  grid-column: 1/8;
+  padding-top: 80px;
+}
+#must_know_page_introduction {
+  grid-column: 1/3;
+  grid-row: 3/5;
+}
+#multi_hands_img {
+  grid-column: 3/9;
+  grid-row: 3/5;
+}
+#skin_tone_img {
+  grid-column: 3/8;
+  grid-row: 7/9;
+  margin-top: 40px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+#footer {
+  margin-top: 50px;
+  padding-top: 50px;
+}
+
+/* You Got This Page */
+main p:nth-of-type(1) {
+  grid-column: 1/8;
+  padding-top: 80px;
+  margin-top: 20px;
+  margin-bottom: -250px;
+  text-align: center;
+}
+#you_can_do_it_introduction {
+  grid-column: 1/3;
+  grid-row: 3/5;
+}
+#blue_dress_shirt_img {
+  grid-column: 3/9;
+  grid-row: 3/5;
+}
+#green_shirt_img {
+  grid-column: 3/5;
+  grid-row: 7/8;
+  margin-top: 40px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+/* Continue of Website Wide CSS */
+
+.colors {
+  width: 100%;
+  min-width: 350px;
+  margin: 30px auto;
+  text-align: center;
+}
+.colors th {
+  background-color: #999;
+}
+.colors td{
+  width: 25%;
+  height: 3em;
+}
+
+.primary {
+  background-color: var(--primary-color);
+}
+.secondary {
+  background-color: var(--secondary-color);
+}
+.accent1 {
+  background-color: var(--accent1-color);
+}
+.accent2{
+  background-color: var(--accent2-color);
+}
+
+p.colored {
+  background-color: var(--paragraph-background-color);
+  color: var(--paragraph-color-on-color);
+}
+
+nav {
+  background-color: var(--nav-background-color);
+  line-height: 3em;
+  text-align: center;
+  font-size: 1.2em;
+}
+nav  {
+  list-style-type: none;
+  display: flex;
+
+}
+nav a {
+  padding:1em;
+  min-width: 120px;
+  text-decoration: none;
+  padding: 10px;
+
+}
+nav a:link, nav a:visited {
+  color: var(--nav-link-color);
+}
+nav a:hover {
+  color: var(--nav-hover-link-color);
+  background-color: var(--nav-hover-background-color);
+}
+
+
+.sm-home {
+  grid-area: home;
+  background-color: #ccc;
+  line-height: 3em;
+}
+.sm-page2 {
+  grid-area: page2;
+  background-color: #ccc;
+  line-height: 3em;
+}
+.sm-page3 {
+  grid-area: page3;
+  background-color: #ccc;
+  line-height: 3em;
+}
+
+.top {
+  grid-area: top;
+  border-left: 1px solid;
+}
+
+.left {
+  grid-area: left;
+  border-top: 1px solid;
+  border-left: 1px solid;
+}
+
+.right {
+  grid-area: right;
+  border-top: 1px solid;
+  border-right: 1px solid;
+}
+
+/* Media Stuff */
+
+@media screen and (max-width: 900px) {
+  #hero, .home-grid {
+      display: block;
+      height: auto;
+  }
+  nav, footer {
+      flex-direction: column;
+  }
+  nav a {
+      display: block;
+      padding: 15px;
+  }
+  #hero {
+      margin-top: 0;
+  }
+  #hero-msg {
+      margin-top: 0;
+  }
+  #hero-msg h4 {
+      display: none;
+  }
+  .home-title {
+      font-size: 25px;
+      color: #6f7364;
+  }
+  .rivers-card, .camping-card, .rapids-card { 
+      margin: 50px auto;
+      width: 60%;
+  }
+  #background {
+      display: none;
+  }
+  .mountains, .msg {
+      width: 80%;
+      display: block;
+      margin: 0 auto;
+  }
+  footer {
+      margin-top: 25px;
+  }
+}
+
+/* Don't need VVV */
+
+/* .sitemap {
+  display: grid;
+  justify-content: center;
+
+  grid-template-columns: repeat(6, 15%);
+  grid-template-rows: 3em 1.5em 1.5em 3em;
+  grid-template-areas: ". . home home . ."
+    ". . . top . ."
+    ". left left right right ."
+    "page2 page2 . . page3 page3";
+}
+.sitemap > div {
+
+  text-align: center;
+
+} */

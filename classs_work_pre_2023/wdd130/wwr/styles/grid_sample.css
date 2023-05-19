@@ -1,0 +1,25 @@
+body{
+    background-color: purple;
+}
+main{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* Grid only affects children, not grandchildren. */
+}
+.cuteness{
+    background-color: pink;
+}
+.desctruction{
+    background-color: red;
+    grid-row:2;
+    grid-column:2;
+}
+.desctruction div{ /*this is telling it to find all divs inside of destruction. It's claled
+    a drill down instruction. */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.care{
+    background-color: blue;
+    grid-column: 2/4;
+}

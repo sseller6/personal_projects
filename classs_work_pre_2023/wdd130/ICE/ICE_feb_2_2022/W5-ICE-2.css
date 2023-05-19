@@ -1,0 +1,52 @@
+* {
+  margin: auto;
+  width: 800px;
+  padding: 0px;
+}
+
+/* Main */
+main {
+  height: 320px;
+}
+
+main img {
+  width: 800px;
+  height: 320px
+}
+
+/* Footer */
+
+footer {
+  background-color: #727272;
+  width: 800px;
+}
+
+.grid-images  {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding-top: 25px;
+  padding-bottom: 25px;
+
+}
+
+.grid-images img:nth-child(1) {
+  margin-left: 80px;
+}
+
+.grid-images img:nth-child(3) {
+  margin-right: 80px;
+}
+
+
+.grid-images img {
+  width: 150px;
+  border-radius: 50%;
+  border: 9px solid #444
+}
+
+/* main img, footer {
+  width: 1000px;
+  height:300px;
+} */
+
+/* Spencer Birch, Blake Taylor, Spencer Ehardt, Erik Saylor, Abraham Jimenez,, Steven Sellers */

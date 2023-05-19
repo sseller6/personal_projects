@@ -1,0 +1,14 @@
+main()
+
+get_month()
+
+get_year()
+
+display()
+
+- display_table()
+
+- compute_offset()
+- days_year()
+- days_month()
+- is_leap_year()

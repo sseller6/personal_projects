@@ -1,0 +1,42 @@
+body {
+    background: rgb(20, 1, 105);
+}
+
+.clock {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: rgb(71, 204, 160);
+    font-size: 60px;
+    font-family: Courier New, monospace	;
+    letter-spacing: 7px;
+   
+
+
+}
+
+.input{
+margin: 100px 0;
+padding: 0;
+box-sizing: border-box;
+font-family: "Nunito", sans-serif;
+text-align: center;
+}
+
+input[type="text"]{
+    text-align: center;
+    height: 50px;
+    width: 600px;
+    background: #98adb5;
+    font-family: "Nunito", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    border: none;
+    border-radius: 2px;
+    padding: 10px 10px;
+}
+
+.display{
+    text-align: center;
+}

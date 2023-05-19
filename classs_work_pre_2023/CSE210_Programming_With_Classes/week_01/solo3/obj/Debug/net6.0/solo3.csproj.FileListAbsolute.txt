@@ -1,0 +1,15 @@
+C:\git\desktop_version_wdd\sseller6.github.io\CSE210_Programming_With_Classes\week_01\solo3\bin\Debug\net6.0\solo3.exe
+C:\git\desktop_version_wdd\sseller6.github.io\CSE210_Programming_With_Classes\week_01\solo3\bin\Debug\net6.0\solo3.deps.json
+C:\git\desktop_version_wdd\sseller6.github.io\CSE210_Programming_With_Classes\week_01\solo3\bin\Debug\net6.0\solo3.runtimeconfig.json
+C:\git\desktop_version_wdd\sseller6.github.io\CSE210_Programming_With_Classes\week_01\solo3\bin\Debug\net6.0\solo3.dll
+C:\git\desktop_version_wdd\sseller6.github.io\CSE210_Programming_With_Classes\week_01\solo3\bin\Debug\net6.0\solo3.pdb
+C:\git\desktop_version_wdd\sseller6.github.io\CSE210_Programming_With_Classes\week_01\solo3\obj\Debug\net6.0\solo3.csproj.AssemblyReference.cache
+C:\git\desktop_version_wdd\sseller6.github.io\CSE210_Programming_With_Classes\week_01\solo3\obj\Debug\net6.0\solo3.GeneratedMSBuildEditorConfig.editorconfig
+C:\git\desktop_version_wdd\sseller6.github.io\CSE210_Programming_With_Classes\week_01\solo3\obj\Debug\net6.0\solo3.AssemblyInfoInputs.cache
+C:\git\desktop_version_wdd\sseller6.github.io\CSE210_Programming_With_Classes\week_01\solo3\obj\Debug\net6.0\solo3.AssemblyInfo.cs
+C:\git\desktop_version_wdd\sseller6.github.io\CSE210_Programming_With_Classes\week_01\solo3\obj\Debug\net6.0\solo3.csproj.CoreCompileInputs.cache
+C:\git\desktop_version_wdd\sseller6.github.io\CSE210_Programming_With_Classes\week_01\solo3\obj\Debug\net6.0\solo3.dll
+C:\git\desktop_version_wdd\sseller6.github.io\CSE210_Programming_With_Classes\week_01\solo3\obj\Debug\net6.0\refint\solo3.dll
+C:\git\desktop_version_wdd\sseller6.github.io\CSE210_Programming_With_Classes\week_01\solo3\obj\Debug\net6.0\solo3.pdb
+C:\git\desktop_version_wdd\sseller6.github.io\CSE210_Programming_With_Classes\week_01\solo3\obj\Debug\net6.0\solo3.genruntimeconfig.cache
+C:\git\desktop_version_wdd\sseller6.github.io\CSE210_Programming_With_Classes\week_01\solo3\obj\Debug\net6.0\ref\solo3.dll
