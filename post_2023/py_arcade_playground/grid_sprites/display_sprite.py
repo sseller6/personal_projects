@@ -57,7 +57,7 @@ class MyGame(arcade.Window):
 
         # Set up the player, specifically placing it at these coordinates.
 
-        image_source = "grid_sprites\player_move\mage_1.png"
+        image_source = "player_move\mage_1.png"
 
         self.player_sprite = arcade.Sprite(image_source, CHARACTER_SCALING)
 
