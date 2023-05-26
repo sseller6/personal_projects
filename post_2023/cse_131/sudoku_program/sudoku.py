@@ -1,3 +1,17 @@
+# 1. Name:
+#      Steven Sellers
+# 2. Assignment Name:
+#      Lab 06 : Sudoku Program
+# 3. Assignment Description:
+#      This program is a Sudoku game that has three main features.
+#      First, it displays a board and updates it as the game progresses.
+#      Second, it checks the rules of sudoku.
+#      Third, it can save the current board to a file and reopen the file to continue where the user left off.
+# 4. What was the hardest part? Be as specific as possible.
+#      The hardes part for me was figuring out how to display the board. I struggle with coming up with the logic to display text-based boards.
+# 5. How long did it take for you to complete the assignment?
+#      The total time it too me this week was about 6 hours.
+
 import json
 
 def main():
@@ -6,20 +20,19 @@ def main():
     """
     # Set variables.
     board = read_board()
-    quit_game = "no"
+    game_state = "no"
     continue_game = True
     # Begin game.
     display_board(board)
     while continue_game:
-        updated_board, quit_game = play_round(board)
-        if quit_game == "quit":
+        updated_board, game_state = play_round(board)
+        if game_state == "quit":
             print("Your game is saved. Thank you for playing.")
             continue_game = False
         else:
             display_board(updated_board)
         
     write_board(updated_board)
-
 
 def read_board():
     """
@@ -83,9 +96,10 @@ def play_round(board):
         # Get the coordinate from the user.
         column, row, coordinate = get_coordinate(board)
         # If the player inputs "Q" then quit and save.
-        if column == "Q":
+        if coordinate == "Q":
             finished_round = True
             return board, "quit"
+        
         # Otherwise, get the value from the user.
         else:
             value = get_value(board, coordinate, column, row)
@@ -99,8 +113,6 @@ def play_round(board):
             # START OF THE WHILE LOOP.
             if value == None:
                 finished_round = False
-            
-            
 
     return board, "no"
 
@@ -108,40 +120,40 @@ def get_coordinate(board):
     """
     This function gets the coordinate from the user, error checks the user input, and returns a column and row.
     """
-    # Set variables.
-    is_input_valid = False
-    is_coordinate_valid = True
-    column_valid = False
-    row_valid = False
     done = False
 
     # Get coordinate from user. We use a sentinel-controlled loop for this.
     while done != True:
-        coordinate = input("Specify a coordinate to edit or 'Q' to save and quit ")
+        # Set variables.
+        is_input_valid = False
+        is_coordinate_valid = True
+        column_valid = False
+        row_valid = False
+        coordinate = input("Specify a coordinate to edit or enter 'Q' to save and quit. ")
         if coordinate.upper() == "Q":
             done = True
-
-            return "Q", 0, 0
+            return 0, 0, "Q"
         
-        elif coordinate.upper() == "S":
-            print("Which square would you like possible values for? ")
-
         # Error check user input.
-        for character in coordinate.upper():
-            if "A" <= character <= "Z":
-                column = ord(character) - ord("A")
-                column_valid = True
-            elif 1 <= int(character) <= 9:
-                row = int(character) - 1
-                row_valid = True
-            else:
-                is_input_valid = False
-                print(f"ERROR: Square {coordinate} is invalid. ")
+        if len(coordinate) > 2:
+            print("Coordinate can not be more than two characters long. ")
+        else:
+            for character in coordinate.upper():
+                if "A" <= character <= "Z":
+                    column = ord(character) - ord("A")
+                    column_valid = True
+                elif 1 <= int(character) <= 9:
+                    row = int(character) - 1
+                    row_valid = True
+                else:
+                    is_input_valid = False
+                    print(f"ERROR: Square {coordinate} is invalid. ")
 
         # is_input_valid is the controlling expression. It must be true to leave the loop.
         if column_valid == True and row_valid == True:
             is_input_valid = True
-
+        else:
+            print("Invalid Coordinate")
 
         if is_input_valid:
         # Finished getting coordinate. Now check if coordinate is filled.
@@ -152,7 +164,6 @@ def get_coordinate(board):
                 is_coordinate_valid = False
                 print(f"ERROR: Square {coordinate} is filled. ")
                 
-            
             if is_input_valid == True and is_coordinate_valid == True:
                 done = True
 
@@ -173,7 +184,7 @@ def get_value(board, coordinate, column, row):
                     
                 elif 1 <= int(value) <= 9:
                     valid = True
-                elif value <1 or int(value) > 9:
+                elif int(value) <1 or int(value) > 9:
                     print("The value must be between 1 and 9. ")
                 else:
                     valid = False
@@ -188,7 +199,6 @@ def get_value(board, coordinate, column, row):
 
     elif follows_rules == False:
         return 
-
 
 def check_rules(board, value, column, row):
     """
