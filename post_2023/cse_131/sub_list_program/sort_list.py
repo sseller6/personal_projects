@@ -5,15 +5,17 @@
 # 3. Assignment Description:
 #      sort_list.py sorts a list from smallest to largest.
 # 4. What was the hardest part? Be as specific as possible.
-#      -a paragraph or two about how the assignment went for you-
+#      The hardest part for me was trying to figure out why my program would sort everything else correctly 
+#      besides the reversed-even/odd test cases. I found out that my program was only doing 1 iteration of sorting.
+#      The issue was that I was swapping JUST the pointers instead of swapping both lists. After fixing that bug,
+#      the program began to work properly.
 # 5. How long did it take for you to complete the assignment?
-#      -total time in hours including reading the assignment and submitting the program-
+#      It took me a total of 4 hours to complete the assignemnt.
 
 def main():
-    #array = read_file()
-    #sorted_array = sort(array)
-    #print(sorted_array)
-    test_sort()
+    array = read_file()
+    sorted_array = sort(array)
+    print(sorted_array)
     
 def test_sort():
     print()
@@ -22,9 +24,9 @@ def test_sort():
     print(f"Test: Small sorted    Input: [3, 6]                           Output: {sort([3, 6])}")
     print(f"Test: Small unsorted  Input: [6,3]                            Output: {sort([6, 3])}")
     print(f"Test: Sorted-even     Input: [3, 12, 26, 38, 49, 59, 64]      Output: {sort([3, 12, 26, 38, 49, 59, 64])}")
-    #print(f"Test: Reversed-even   Input: [64, 59, 49, 38, 26, 12, 3]  Output: {sort([64, 59, 49, 38, 26, 12, 3])}")
+    print(f"Test: Reversed-even   Input: [64, 59, 49, 38, 26, 12, 3]      Output: {sort([64, 59, 49, 38, 26, 12, 3])}")
     print(f"Test: Sorted-odd      Input: [3, 12, 26, 38, 49, 59, 64, 79]  Output: {sort([3, 12, 26, 38, 49, 59, 64, 79])}")
-    #print(f"Test: Reversed-odd    Input: [79, 64, 59, 49, 38, 26, 12, 3]  Output: {sort([79, 64, 59, 49, 38, 26, 12, 3])}")
+    print(f"Test: Reversed-odd    Input: [79, 64, 59, 49, 38, 26, 12, 3]  Output: {sort([79, 64, 59, 49, 38, 26, 12, 3])}")
     print(f"Test: Duplicates      Input: [31, 55, 99, 31, 49, 49]         Output: {sort([31, 55, 99, 31, 49, 49])}")
 
 def read_file():
@@ -75,13 +77,8 @@ def sort(array):
             combine(src, des, begin1, begin2, end2)
             begin1 = end2
         # Swap src and des pointers.
-        new_begin1 = begin2
-        new_end1 = end2
-        begin2 = begin1
-        end2 = end1
-        begin1 = new_begin1
-        end1 = new_end1
-    return des
+        src, des = des, src
+    return src
 
 def combine(source, destination, begin1, begin2, end2):
     """
